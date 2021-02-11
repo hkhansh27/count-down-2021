@@ -1,0 +1,101 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.clock .viewTime {
+    width: 90%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 55px auto;
+}
+.clock .viewTime .time-remain {
+    width: 200px;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+.clock .viewTime .time-remain > p {
+    position: absolute;
+    font-size: 25px;
+    top: -100%;
+    left: 32%;
+    color: #a93132;
+    opacity: 0;
+}
+.clock .viewTime .time-remain:first-child {
+    margin-right: 50px;
+}
+.clock .viewTime .time-remain .element-time {
+    width: 50%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    border-style: solid;
+    border-width: 1.5px;
+    border-color: rgba(212, 144, 61, 0.432);
+    background-color: rgba(255, 255, 255, 0.26);
+    border-radius: 10px;
+    top: 200%;
+    opacity: 0;
+    
+}
+.clock .viewTime .time-remain .element-time:nth-child(odd) {
+    margin-left: 3px;
+}
+.clock .viewTime .hai-cham > p {
+    font-size: 100px;
+    line-height: 110%;
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+    color: #a93132;
+    position: relative;
+    top: -150%;
+    opacity: 0;
+}
+.clock .viewTime .time-remain .element-time >  ul {
+    width: 100%;
+    position: absolute;
+    transition: 0.5s;
+}
+.clock .viewTime .time-remain .element-time >  ul > li {
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    text-align: center;
+    line-height: 220%;
+    font-size: 50px;
+    color: #a93132;
+}
+
+@media only screen and (max-width: 414px) {
+    .clock {
+        width: 95% !important;
+        height: 150px !important;
+    }
+    .clock .viewTime {
+        margin-top: 37.5px;
+    }
+    .clock .viewTime .time-remain > p {
+        font-size: 18px;
+        left: 25%;
+    }
+    .clock .viewTime .time-remain:first-child {
+        margin-right: 10px;
+        transition: 0.5s;
+    }
+    .clock .viewTime .hai-cham > p {
+        font-size: 45px;
+        line-height: 150%;
+    }
+    .clock .viewTime .time-remain .element-time {
+        border-radius: 7px;
+    }
+    .clock .viewTime  .time-remain .element-time > ul > li {
+        font-size: 34.5px;
+    }
+}
